@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mafia_helper/Screens/Game/game_screen.dart';
 import 'package:mafia_helper/UICommon/app_theme.dart';
 import 'package:mafia_helper/Screens/Shufl/shuffle_screen.dart';
 
@@ -15,7 +16,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Помошник мафии',
       theme: AppTheme.darkTheme,
-      home: const MyHomePage(title: 'Помошник мафии'),
+      initialRoute: "/",
+      routes: {
+        "/": (context) => const MyHomePage(title: 'Помошник мафии'),
+        "/game": (context) => const SecondRoute(),
+      }
     );
   }
 }
