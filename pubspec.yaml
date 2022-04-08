@@ -33,7 +33,17 @@ dependencies:
   shared_preferences: 2.0.13
   json_serializable: 6.1.5
   build_runner: ^2.1.0
+  responsive_framework: 0.1.7
+  flutter_picker: ^2.0.3
+  argon_buttons_flutter: ^1.1.0
+  circular_countdown_timer: ^0.2.1
+  firebase_core: ^1.14.0
+  firebase_analytics: ^9.1.4
 
+fonts:
+  - family: CustomIcons
+    fonts:
+      - asset: fonts/CustomIcons.ttf
 
 dev_dependencies:
   flutter_test:

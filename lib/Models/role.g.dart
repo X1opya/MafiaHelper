@@ -7,22 +7,19 @@ part of 'role.dart';
 // **************************************************************************
 
 Role _$RoleFromJson(Map<String, dynamic> json) => Role(
-      $enumDecode(_$RoleTypeEnumMap, json['type']),
+      json['name'] as String,
       json['color'] as int?,
       json['icon'] as String?,
-    );
+    )
+      ..isVoting = json['isVoting'] as bool
+      ..isDead = json['isDead'] as bool
+      ..fallCount = json['fallCount'] as int;
 
 Map<String, dynamic> _$RoleToJson(Role instance) => <String, dynamic>{
+      'name': instance.name,
       'color': instance.color,
       'icon': instance.icon,
-      'type': _$RoleTypeEnumMap[instance.type],
+      'isVoting': instance.isVoting,
+      'isDead': instance.isDead,
+      'fallCount': instance.fallCount,
     };
-
-const _$RoleTypeEnumMap = {
-  RoleType.civilian: 'civilian',
-  RoleType.mafia: 'mafia',
-  RoleType.don: 'don',
-  RoleType.comm: 'comm',
-  RoleType.doctor: 'doctor',
-  RoleType.other: 'other',
-};
